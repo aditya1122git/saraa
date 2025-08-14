@@ -930,18 +930,18 @@ body {
 .memory-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  max-width: 400px;
-  margin: 2rem auto;
+  gap: 0.5rem;
+  max-width: 320px;
+  margin: 1rem auto;
 }
 
 .memory-card {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #ff9a9e, #fecfef);
   border: 3px solid #ff6b9d;
   border-radius: 12px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -1058,7 +1058,7 @@ body {
 
 /* Game Progress */
 .next-game-btn {
-  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  background: linear-gradient(135deg, #ff6b9d, #ff8fab);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -1069,13 +1069,13 @@ body {
   margin-top: 0;
   transition: all 0.3s ease;
   font-family: 'Comfortaa', cursive;
-  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.3);
 }
 
 .next-game-btn:hover {
   transform: translateY(-3px) scale(1.05);
   background: linear-gradient(135deg, #fd79a8, #fdcb6e);
-  box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
 }
 
 /* Enhanced Game Win Animation */

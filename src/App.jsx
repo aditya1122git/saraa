@@ -20,9 +20,9 @@ function LoveMemoryGame({ onWin }) {
   const [gameTimer, setGameTimer] = useState(10);
 
   const quizQuestions = [
-    { question: "What makes Neha special? 💖", options: ["Her smile", "Her kindness", "Her beauty", "Everything!"], correct: 3 },
-    { question: "How much do I love Neha? 💕", options: ["A lot", "So much", "Infinitely", "Beyond words!"], correct: 3 },
-    { question: "What's my favorite thing about Neha? ✨", options: ["Her laugh", "Her eyes", "Her soul", "All of her!"], correct: 3 }
+  { question: "What makes Kajal special? 💖", options: ["Her smile", "Her kindness", "Her beauty", "Everything!"], correct: 3 },
+  { question: "How much do I love Kajal? 💕", options: ["A lot", "So much", "Infinitely", "Beyond words!"], correct: 3 },
+  { question: "What's my favorite thing about Kajal? ✨", options: ["Her laugh", "Her eyes", "Her soul", "All of her!"], correct: 3 }
   ];
 
   // Initialize memory game
@@ -280,14 +280,14 @@ function LoveMemoryGame({ onWin }) {
   );
 }
 
-// Cute flippable cards for Neha
+// Cute flippable cards for Kajal
 function CuteCards() {
   const cards = [
     { front: '💌', back: 'You + Me = Forever 💖' },
     { front: '🌹', back: 'Every rose reminds me of you 🌷' },
     { front: '🌙', back: 'I love you to the moon and back 🌙✨' },
     { front: '🧸', back: 'Hug me when you miss me 🤗' },
-    { front: '✨', back: 'You are my magic, Neha ✨' },
+  { front: '✨', back: 'You are my magic, Kajal ✨' },
     { front: '🎵', back: 'My heart sings your name 🎶' },
   ];
   const [flipped, setFlipped] = useState(Array(cards.length).fill(false));
@@ -491,7 +491,7 @@ function App() {
   if (phase === 'door') {
     return (
       <div className="door-screen">
-        <div className="door-title">Knock Knock, Neha 💖</div>
+  <div className="door-title">Knock Knock, Kajal 💖</div>
         <div className={`door-frame ${doorOpen ? 'open' : ''}`}>
           <div className="door left" />
           <div className="door right" />
@@ -551,7 +551,7 @@ function App() {
           <h1 className="title fancy-font">
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
             <span className="sparkle">✨</span>
-            For My Love Neha
+            For My Love Kajal 👸
             <span className="sparkle">✨</span>
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
           </h1>
@@ -596,7 +596,7 @@ function App() {
             </h2>
             
             <p className="message-text">
-              Dear Neha, you make my world brighter than a thousand stars!<br />
+              Dear Kajal, you make my world brighter than a thousand stars!<br />
               Every moment with you feels like pure magic. ✨
             </p>
             
@@ -633,16 +633,16 @@ function App() {
           </div>
         )}
 
-        {/* Extra cute cards for Neha */}
+  {/* Extra cute cards for Kajal */}
         {gameCompleted && (
           <div className="cards-section">
-            <h3 className="cards-title fancy-font">Little notes for you, Neha 💖</h3>
+            <h3 className="cards-title fancy-font">Little notes for you, Kajal 💖</h3>
             <CuteCards />
           </div>
         )}
 
         <div className="footer">
-          <p>Made with 💖 just for you, Neha!</p>
+          <p>Made with 💖 by Aditya</p>
           <div className="mini-teddies">
             <span className="mini-teddy">🧸</span>
             <span className="mini-teddy">💕</span>
