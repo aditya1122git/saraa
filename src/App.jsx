@@ -20,9 +20,9 @@ function LoveMemoryGame({ onWin }) {
   const [gameTimer, setGameTimer] = useState(10);
 
   const quizQuestions = [
-  { question: "What makes Jiya special? ❤️", options: ["Her smile", "Her kindness", "Her personality", "Everything!"], correct: 3 },
-  { question: "How amazing is Jiya's presence? 🌻", options: ["Nice", "Great", "Incredible", "Magical!"], correct: 3 },
-  { question: "What do you think about Jiya? ✨", options: ["She's okay", "She's cool", "She's wonderful", "She's absolutely perfect!"], correct: 3 }
+  { question: "What makes Shreya special? ❤️", options: ["Her smile", "Her kindness", "Her personality", "Everything!"], correct: 3 },
+  { question: "How amazing is Shreya's presence? 🌻", options: ["Nice", "Great", "Incredible", "Magical!"], correct: 3 },
+  { question: "What do you think about Shreya? ✨", options: ["She's okay", "She's cool", "She's wonderful", "She's absolutely perfect!"], correct: 3 }
   ];
 
   // Initialize memory game
@@ -280,13 +280,15 @@ function LoveMemoryGame({ onWin }) {
   );
 }
 
-// Cute flippable cards for Jiya
+// Cute flippable cards for Shreya
 function CuteCards() {
   const cards = [
-    { front: 'J', back: 'Just radiates happiness wherever she goes 🧚‍♀️' },
-    { front: 'I', back: 'Irresistibly positive and uplifting 🌟' },
-    { front: 'Y', back: 'Your presence makes every moment special 🩷' },
-    { front: 'A', back: 'Always caring, always inspiring ✨' },
+    { front: 'S', back: 'Spark that brightens even ordinary moments ✨' },
+    { front: 'H', back: 'Heart of pure kindness and grace 🌙' },
+    { front: 'R', back: 'Radiant aura that feels so calming 🧚‍♀️' },
+    { front: 'E', back: 'Elegance in every little expression 🌷' },
+    { front: 'Y', back: 'Youthful glow and effortless charm 💖' },
+    { front: 'A', back: 'Admirably genuine and thoughtful always 🌟' },
   ];
   const [flipped, setFlipped] = useState(Array(cards.length).fill(false));
 
@@ -492,7 +494,7 @@ function App() {
   if (phase === 'door') {
     return (
       <div className="door-screen">
-  <div className="door-title">Knock Knock, Jiya 🦋</div>
+  <div className="door-title">Knock Knock, Shreya 🦋</div>
         <div className={`door-frame ${doorOpen ? 'open' : ''}`}>
           <div className="door left" />
           <div className="door right" />
@@ -553,7 +555,7 @@ function App() {
           <h1 className="title fancy-font">
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
             <span className="sparkle">🤍</span>
-            For Dear Jiya 👸
+            For Dear Shreya 👸
             <span className="sparkle">🤍</span>
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
           </h1>
@@ -598,7 +600,7 @@ function App() {
             </h2>
             
             <p className="message-text">
-              Dear Jiya, you make my world brighter than a thousand stars!<br />
+              Dear Shreya, you make my world brighter than a thousand stars!<br />
               Every moment with you feels like pure magic. ✨
             </p>
             
@@ -635,10 +637,10 @@ function App() {
           </div>
         )}
 
-  {/* Extra cute cards for Jiya */}
+  {/* Extra cute cards for Shreya */}
         {gameCompleted && (
           <div className="cards-section">
-            <h3 className="cards-title fancy-font">Special meanings for you, Jiya ♥️</h3>
+            <h3 className="cards-title fancy-font">Special meanings for you, Shreya ♥️</h3>
             <CuteCards />
           </div>
         )}
