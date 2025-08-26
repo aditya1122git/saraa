@@ -20,15 +20,15 @@ function LoveMemoryGame({ onWin }) {
   const [gameTimer, setGameTimer] = useState(10);
 
   const quizQuestions = [
-  { question: "What makes Kajal special? 💖", options: ["Her smile", "Her kindness", "Her beauty", "Everything!"], correct: 3 },
-  { question: "How much do I love Kajal? 💕", options: ["A lot", "So much", "Infinitely", "Beyond words!"], correct: 3 },
-  { question: "What's my favorite thing about Kajal? ✨", options: ["Her laugh", "Her eyes", "Her soul", "All of her!"], correct: 3 }
+  { question: "What makes Jiya special? ❤️", options: ["Her smile", "Her kindness", "Her personality", "Everything!"], correct: 3 },
+  { question: "How amazing is Jiya's presence? 🌻", options: ["Nice", "Great", "Incredible", "Magical!"], correct: 3 },
+  { question: "What do you think about Jiya? ✨", options: ["She's okay", "She's cool", "She's wonderful", "She's absolutely perfect!"], correct: 3 }
   ];
 
   // Initialize memory game
   useEffect(() => {
     if (gameType === 'memory') {
-      const cards = ['💖', '🌹', '✨', '🦋', '💕', '🎀'].flatMap((emoji, i) => [
+      const cards = ['💗', '🌹', '⭐', '🦋', '🌻', '🎀'].flatMap((emoji, i) => [
         { id: i * 2, emoji, matched: false },
         { id: i * 2 + 1, emoji, matched: false }
       ]).sort(() => Math.random() - 0.5);
@@ -181,7 +181,7 @@ function LoveMemoryGame({ onWin }) {
     <div className="love-game">
       {gameType === 'sequence' && (
         <>
-          <div className="game-instructions">💕 Game 1/4: Click hearts in order (1→2→3) 💕</div>
+          <div className="game-instructions">🩷 Game 1/4: Click hearts in order (1→2→3) 🩷</div>
           <div className="game-hearts">
             {sequence.map((_, i) => (
               <button
@@ -199,7 +199,7 @@ function LoveMemoryGame({ onWin }) {
 
       {gameType === 'memory' && (
         <>
-          <div className="game-instructions">💕 Game 2/4: Find matching pairs! 💕</div>
+          <div className="game-instructions">🩷 Game 2/4: Find matching pairs! 🩷</div>
           <div className="memory-grid">
             {memoryCards.map(card => (
               <button
@@ -207,7 +207,7 @@ function LoveMemoryGame({ onWin }) {
                 className={`memory-card ${flippedCards.includes(card.id) || matchedCards.includes(card.id) ? 'flipped' : ''}`}
                 onClick={() => handleMemoryCardClick(card.id)}
               >
-                {flippedCards.includes(card.id) || matchedCards.includes(card.id) ? card.emoji : '💝'}
+                {flippedCards.includes(card.id) || matchedCards.includes(card.id) ? card.emoji : '🍁'}
               </button>
             ))}
           </div>
@@ -216,7 +216,7 @@ function LoveMemoryGame({ onWin }) {
 
       {gameType === 'quiz' && (
         <>
-          <div className="game-instructions">💕 Game 3/4: Answer with your heart! 💕</div>
+          <div className="game-instructions">🩷 Game 3/4: Answer with your heart! 🩷</div>
           <div className="quiz-container">
             {quizQuestion < quizQuestions.length && (
               <div className="quiz-question">
@@ -240,8 +240,8 @@ function LoveMemoryGame({ onWin }) {
 
       {gameType === 'catch' && (
         <>
-          <div className="game-instructions">💕 Game 4/4: Catch 5 hearts in {gameTimer}s! 💕</div>
-          <div className="catch-stats">❤️ Caught: {caughtHearts}/5 | ⏰ Time: {gameTimer}s</div>
+          <div className="game-instructions">🩷 Game 4/4: Catch 5 hearts in {gameTimer}s! 🩷</div>
+          <div className="catch-stats">💖 Caught: {caughtHearts}/5 | ⏰ Time: {gameTimer}s</div>
           <div className="catch-area">
             {catchHearts.map(heart => (
               <button
@@ -263,14 +263,14 @@ function LoveMemoryGame({ onWin }) {
             <>
               <div>🎉 Level {currentGame} Complete! 💖</div>
               <button className="next-game-btn" onClick={nextGame}>
-                💕 Next Challenge 💕
+                🤍 Next Challenge 🤍
               </button>
             </>
           ) : (
             <>
-              <div>🎉 All games complete! You won my heart! 💖</div>
+              <div>🥳 All games complete! You won my heart! 🫀</div>
               <button className="next-game-btn" onClick={nextGame}>
-        💖 View Surprise 💖
+        🎉 View Surprise ! 🎉
               </button>
             </>
           )}
@@ -280,15 +280,13 @@ function LoveMemoryGame({ onWin }) {
   );
 }
 
-// Cute flippable cards for Kajal
+// Cute flippable cards for Jiya
 function CuteCards() {
   const cards = [
-    { front: '💌', back: 'You + Me = Forever 💖' },
-    { front: '🌹', back: 'Every rose reminds me of you 🌷' },
-    { front: '🌙', back: 'I love you to the moon and back 🌙✨' },
-    { front: '🧸', back: 'Hug me when you miss me 🤗' },
-  { front: '✨', back: 'You are my magic, Kajal ✨' },
-    { front: '🎵', back: 'My heart sings your name 🎶' },
+    { front: 'J', back: 'Just radiates happiness wherever she goes 🧚‍♀️' },
+    { front: 'I', back: 'Irresistibly positive and uplifting 🌟' },
+    { front: 'Y', back: 'Your presence makes every moment special 🩷' },
+    { front: 'A', back: 'Always caring, always inspiring ✨' },
   ];
   const [flipped, setFlipped] = useState(Array(cards.length).fill(false));
 
@@ -310,6 +308,8 @@ function CuteCards() {
   );
 }
 
+// Swipe Photo Gallery Component  
+
 function App() {
   const [phase, setPhase] = useState('intro');
   const [doorOpen, setDoorOpen] = useState(false);
@@ -324,6 +324,7 @@ function App() {
   const [teddyAnimation, setTeddyAnimation] = useState('');
   const [loveQuote, setLoveQuote] = useState(0);
   const [loveToast, setLoveToast] = useState(false);
+  // Removed photo gallery and heart photo cards state
   const heartIntervalRef = useRef(null);
   const roseIntervalRef = useRef(null);
   const butterflyIntervalRef = useRef(null);
@@ -350,11 +351,11 @@ function App() {
 
   // Love quotes rotation
   const loveQuotes = [
-    "You're My Everything! 💕",
-    "My Heart Beats for You! 💖",
-    "You Make Life Beautiful! ✨",
-    "Forever and Always! 💫",
-    "You're My Sunshine! ☀️"
+    "You're Simply Amazing! 🦋",
+    "Such a Wonderful Person! 👸",
+    "You Brighten Everyone's Day! ✨",
+    "Keep Being Awesome! 💫",
+    "You're One of a Kind! ☀️"
   ];
 
   useEffect(() => {
@@ -479,7 +480,7 @@ function App() {
           setTimeout(() => setPhase('main'), 2200);
         }} aria-label="Click here to enter">
           <div className="heart-emoji-container">
-            <div className="heart-emoji">❤️</div>
+            <div className="heart-emoji">♥️</div>
             <span className="heart-text">Click me</span>
           </div>
         </button>
@@ -491,7 +492,7 @@ function App() {
   if (phase === 'door') {
     return (
       <div className="door-screen">
-  <div className="door-title">Knock Knock, Kajal 💖</div>
+  <div className="door-title">Knock Knock, Jiya 🦋</div>
         <div className={`door-frame ${doorOpen ? 'open' : ''}`}>
           <div className="door left" />
           <div className="door right" />
@@ -503,6 +504,7 @@ function App() {
   // Main scene with all effects
   return (
     <div className="app">
+  {/* Removed photo gallery and heart photo cards UI */}
       {/* Heart rain */}
       {hearts.map(heart => (
         <div
@@ -521,7 +523,7 @@ function App() {
           className="growing-rose"
           style={{ left: `${rose.left}%`, animationDelay: `${rose.delay}s` }}
         >
-          🌹
+          🌸
         </div>
       ))}
 
@@ -550,9 +552,9 @@ function App() {
         <div className="header">
           <h1 className="title fancy-font">
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
-            <span className="sparkle">✨</span>
-            For My Love Kajal 👸
-            <span className="sparkle">✨</span>
+            <span className="sparkle">🤍</span>
+            For Dear Jiya 👸
+            <span className="sparkle">🤍</span>
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
           </h1>
         </div>
@@ -596,22 +598,22 @@ function App() {
             </h2>
             
             <p className="message-text">
-              Dear Kajal, you make my world brighter than a thousand stars!<br />
+              Dear Jiya, you make my world brighter than a thousand stars!<br />
               Every moment with you feels like pure magic. ✨
             </p>
             
             <div className="love-stats">
               <div className="stat">
                 <FontAwesomeIcon icon={faHeart} className="stat-icon" />
-                <span>Love Level: ∞</span>
+                <span>Prettiness: Absolutely Mesmerizing ✨</span>
               </div>
               <div className="stat">
                 <FontAwesomeIcon icon={faRocket} className="stat-icon" />
-                <span>Cuteness: Over 9000!</span>
+                <span>Awesomeness: Over 9000!</span>
               </div>
               <div className="stat">
                 <FontAwesomeIcon icon={faGift} className="stat-icon" />
-                <span>Happiness: Maximum</span>
+                <span>Positivity: Maximum</span>
               </div>
             </div>
 
@@ -627,31 +629,31 @@ function App() {
               setTimeout(() => setLoveToast(false), 2500);
             }}>
               <FontAwesomeIcon icon={faHeart} />
-              Send Love
+              Send Appreciation
               <FontAwesomeIcon icon={faHeart} />
             </button>
           </div>
         )}
 
-  {/* Extra cute cards for Kajal */}
+  {/* Extra cute cards for Jiya */}
         {gameCompleted && (
           <div className="cards-section">
-            <h3 className="cards-title fancy-font">Little notes for you, Kajal 💖</h3>
+            <h3 className="cards-title fancy-font">Special meanings for you, Jiya ♥️</h3>
             <CuteCards />
           </div>
         )}
 
         <div className="footer">
-          <p>Made with 💖 by Aditya</p>
-          <div className="mini-teddies">
+          <p>Made with 🤍 by Aditya</p>
+          {/* <div className="mini-teddies">
             <span className="mini-teddy">🧸</span>
-            <span className="mini-teddy">💕</span>
+            <span className="mini-teddy">🌻</span>
             <span className="mini-teddy">🧸</span>
-          </div>
+          </div> */}
         </div>
 
         {loveToast && (
-          <div className="love-toast">I love you aditya</div>
+          <div className="love-toast">You're amazing! 🌟</div>
         )}
       </div>
     </div>
