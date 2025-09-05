@@ -20,9 +20,15 @@ function LoveMemoryGame({ onWin }) {
   const [gameTimer, setGameTimer] = useState(10);
 
   const quizQuestions = [
+<<<<<<< HEAD
   { question: "What makes Shreya special? ❤️", options: ["Her smile", "Her kindness", "Her personality", "Everything!"], correct: 3 },
   { question: "How amazing is Shreya's presence? 🌻", options: ["Nice", "Great", "Incredible", "Magical!"], correct: 3 },
   { question: "What do you think about Shreya? ✨", options: ["She's okay", "She's cool", "She's wonderful", "She's absolutely perfect!"], correct: 3 }
+=======
+  { question: "What makes Saraa special? ❤️", options: ["Her smile", "Her kindness", "Her personality", "Everything!"], correct: 3 },
+  { question: "How amazing is Saraa's presence? 🌻", options: ["Nice", "Great", "Incredible", "Magical!"], correct: 3 },
+  { question: "What do you think about Saraa? ✨", options: ["She's okay", "She's cool", "She's wonderful", "She's absolutely perfect!"], correct: 3 }
+>>>>>>> f8413c7 (feat: add SketchCards section for Saraa's sketches)
   ];
 
   // Initialize memory game
@@ -280,6 +286,7 @@ function LoveMemoryGame({ onWin }) {
   );
 }
 
+<<<<<<< HEAD
 // Cute flippable cards for Shreya
 function CuteCards() {
   const cards = [
@@ -289,6 +296,16 @@ function CuteCards() {
     { front: 'E', back: 'Elegance in every little expression 🌷' },
     { front: 'Y', back: 'Youthful glow and effortless charm 💖' },
     { front: 'A', back: 'Admirably genuine and thoughtful always 🌟' },
+=======
+// Cute flippable cards for Saraa
+function CuteCards() {
+  const cards = [
+    { front: 'S', back: 'Smiles that light up every room ☺️' },
+    { front: 'A', back: 'Always caring and thoughtful 💖' },
+    { front: 'R', back: 'Radiates positivity and warmth 🌈' },
+    { front: 'A', back: 'Amazingly unique and inspiring 🌟' },
+    { front: 'A', back: 'Adorable in every way 🦋' },
+>>>>>>> f8413c7 (feat: add SketchCards section for Saraa's sketches)
   ];
   const [flipped, setFlipped] = useState(Array(cards.length).fill(false));
 
@@ -299,13 +316,48 @@ function CuteCards() {
   };
 
   return (
-    <div className="cute-cards">
-      {cards.map((c, i) => (
-        <button key={i} className={`cute-card ${flipped[i] ? 'flipped' : ''}`} onClick={() => toggle(i)}>
-          <div className="card-face card-front">{c.front}</div>
-          <div className="card-face card-back">{c.back}</div>
-        </button>
-      ))}
+    <>
+      <div className="cute-cards">
+        {cards.map((c, i) => (
+          <button key={i} className={`cute-card ${flipped[i] ? 'flipped' : ''}`} onClick={() => toggle(i)}>
+            <div className="card-face card-front">{c.front}</div>
+            <div className="card-face card-back">{c.back}</div>
+          </button>
+        ))}
+      </div>
+      <SketchCards />
+    </>
+  );
+}
+
+// Sketch Cards for Saraa's sketches
+function SketchCards() {
+  const sketches = [
+    { src: '/s1.jpg', label: 'Sketch 1' },
+    { src: '/s2.jpg', label: 'Sketch 2' },
+    { src: '/s3.jpg', label: 'Sketch 3' },
+    { src: '/s4.jpg', label: 'Sketch 4' },
+  ];
+  return (
+    <div className="sketch-cards-section">
+      <h3 className="sketch-cards-title fancy-font">Some of Saraa's Sketches 🎨</h3>
+      <div className="sketch-cards">
+        {sketches.map((sketch, i) => (
+          <div className="sketch-card" key={i}>
+            <img
+              src={sketch.src}
+              alt={sketch.label}
+              className="sketch-img"
+              onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+            />
+            <div className="sketch-placeholder" style={{ display: 'none' }}>
+              <span role="img" aria-label="sketch">🖼️</span>
+              <div className="sketch-label">{sketch.label}</div>
+              <div className="sketch-note">(Add {sketch.src} to public folder)</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -494,7 +546,11 @@ function App() {
   if (phase === 'door') {
     return (
       <div className="door-screen">
+<<<<<<< HEAD
   <div className="door-title">Knock Knock, Shreya 🦋</div>
+=======
+  <div className="door-title">Knock Knock, Saraa 🦋</div>
+>>>>>>> f8413c7 (feat: add SketchCards section for Saraa's sketches)
         <div className={`door-frame ${doorOpen ? 'open' : ''}`}>
           <div className="door left" />
           <div className="door right" />
@@ -555,7 +611,11 @@ function App() {
           <h1 className="title fancy-font">
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
             <span className="sparkle">🤍</span>
+<<<<<<< HEAD
             For Dear Shreya 👸
+=======
+            For Dear Saraa 👸
+>>>>>>> f8413c7 (feat: add SketchCards section for Saraa's sketches)
             <span className="sparkle">🤍</span>
             <FontAwesomeIcon icon={faCrown} className="crown-icon" />
           </h1>
@@ -600,7 +660,11 @@ function App() {
             </h2>
             
             <p className="message-text">
+<<<<<<< HEAD
               Dear Shreya, you make my world brighter than a thousand stars!<br />
+=======
+              Dear Saraa, you make my world brighter than a thousand stars!<br />
+>>>>>>> f8413c7 (feat: add SketchCards section for Saraa's sketches)
               Every moment with you feels like pure magic. ✨
             </p>
             
@@ -637,10 +701,17 @@ function App() {
           </div>
         )}
 
+<<<<<<< HEAD
   {/* Extra cute cards for Shreya */}
         {gameCompleted && (
           <div className="cards-section">
             <h3 className="cards-title fancy-font">Special meanings for you, Shreya ♥️</h3>
+=======
+  {/* Extra cute cards for Saraa */}
+        {gameCompleted && (
+          <div className="cards-section">
+            <h3 className="cards-title fancy-font">Special meanings for you, Saraa ♥️</h3>
+>>>>>>> f8413c7 (feat: add SketchCards section for Saraa's sketches)
             <CuteCards />
           </div>
         )}
