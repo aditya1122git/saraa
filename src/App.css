@@ -1,3 +1,11 @@
+.title.fancy-font {
+  font-family: 'Dancing Script', cursive !important;
+  font-size: 3.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  color: #ff69b4 !important;
+  text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.18), 0 2px 8px rgba(0,0,0,0.13);
+}
 /* === Sketch Cards Section === */
 .sketch-cards-section {
   max-width: 900px;
@@ -619,6 +627,11 @@ body {
 
 .fancy-font {
   font-family: 'Dancing Script', cursive;
+  font-size: 3.2rem !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #ff69b4 !important;
+  text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.18), 0 2px 8px rgba(0,0,0,0.13);
 }
 
 .sparkle {
